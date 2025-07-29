@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llayout_ketquagiaodich_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+        <TextView
+            style="@style/Heading_1_Bold_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kết quả giao dịch"
+            tools:ignore="HardcodedText" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@color/grey_line"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_ketquagiaodich_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llayout_ketquagiaodich_toolbar"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/img_ketquagiaodich"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_check_green"
+            android:elevation="10dp"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/txt_ketquagiaodich_ketqua"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanh toán thành công"
+            android:textColor="@color/black"
+            style="@style/Heading_2_Regular_black"
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txt_ketquagiaodich_tien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.000 đ"
+            android:textColor="@color/red99"
+            style="@style/Heading_1_Bold_black"
+            android:layout_marginTop="5dp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout_ketquagiaodich_thanhtoankhac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/customer_background_noborder_radius_10dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llayout_ketquagiaodich_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf,UselessParent">
+
+            <TextView
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/txt_ketquagiaodich_loaiThanhToan"
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đặt cọc trước"
+                android:textColor="@color/green"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@color/grey_line"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf,UselessParent">
+
+            <TextView
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã thanh toán"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/txt_ketquagiaodich_mathanhtoan"
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MT000001"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@color/grey_line"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessLeaf,UselessParent">
+
+            <TextView
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thời gian thanh toán"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/txt_ketquagiaodich_thoigian_thanhtoan"
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19/07/2025"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_ketquagiaodich_trangchu"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:backgroundTint="@color/red99"
+            android:text="Trang chủ"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            tools:ignore="ButtonStyle,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:paddingTop="15dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sắp xếp theo"
+        style="@style/Heading_2_Bold_black"
+        android:paddingBottom="8dp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/sort_price_asc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá tiền tăng dần"
+        style="@style/Heading_3_Regular_black"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/sort_price_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá tiền giảm dần"
+        style="@style/Heading_3_Regular_black"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/sort_date_newest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày đăng mới nhất"
+        style="@style/Heading_3_Regular_black"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/sort_date_oldest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày đăng cũ nhất"
+        style="@style/Heading_3_Regular_black"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/sort_area_asc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diện tích tăng dần"
+        style="@style/Heading_3_Regular_black"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/sort_area_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diện tích giảm dần"
+        style="@style/Heading_3_Regular_black"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

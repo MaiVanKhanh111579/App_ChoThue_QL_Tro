@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--TOOLBAR-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_dangtinmoi_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Heading_1_Bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tạo tin đăng"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txt_dangtinmoi_3_thoat"
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:background="@drawable/customer_background_noborder_radius_10dp"
+                android:gravity="center"
+                android:text="Thoát"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--BUOC-->
+        <LinearLayout
+            android:id="@+id/llayout_dangtinmoi_buoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            tools:ignore="RtlSymmetry,UselessLeaf">
+
+            <TextView
+                android:id="@+id/txt_dangtinmoi_cac_buoc"
+                style="@style/Heading_3_Bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Bước 3. Cấu hình và Thanh toán"
+                android:textColor="@color/grey_text"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/txt_dangtinmoi_line_buoc1"
+                    android:layout_width="120dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/customer_line"
+                    android:backgroundTint="@color/red99"
+                    tools:ignore="ContentDescription" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/txt_dangtinmoi_line_buoc2"
+                    android:layout_width="120dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/customer_line"
+                    android:backgroundTint="@color/red99"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/txt_dangtinmoi_line_buoc3"
+                    android:layout_width="120dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/customer_line"
+                    android:backgroundTint="@color/red99"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--CONTENT-->
+        <ScrollView
+            android:id="@+id/scrollview_dangtinmoi_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:visibility="visible"
+            android:scrollbars="none"
+
+            tools:ignore="SpeakableTextPresentCheck,UselessLeaf">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="ScrollViewSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    tools:ignore="RtlSymmetry,UselessLeaf">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:background="@drawable/customer_button_redborder_radius_30dp"
+                        android:backgroundTint="@color/grey_background"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:id="@+id/txt_dangtinmoi_3_tratheo_ngay"
+                            style="@style/Heading_3_Regular_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:background="@drawable/customer_button_redborder_radius_30dp"
+                            android:backgroundTint="@color/black"
+                            android:gravity="center"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="25dp"
+                            android:text="Trả theo ngày"
+                            android:textColor="@color/white"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/txt_dangtinmoi_3_tratheo_tuan"
+                            style="@style/Heading_3_Regular_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:background="@drawable/customer_button_redborder_radius_30dp"
+                            android:backgroundTint="@color/grey_background"
+                            android:gravity="center"
+                            android:paddingStart="25dp"
+                            android:paddingEnd="25dp"
+                            android:text="Trả theo tuần"
+                            android:textColor="@color/grey_text"
+                            tools:ignore="HardcodedText,TextContrastCheck" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--CHỌN LOẠI TIN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:ignore="UselessLeaf">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            style="@style/Heading_2_Bold_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chọn loại tin"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/txt_dangtinmoi_3_sosanh_loaitin_va_gia"
+                            style="@style/Paragraph_Regular_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_question"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="@color/grey_text"
+                            android:gravity="center"
+                            android:text="So sánh loại tin và giá"
+                            android:textColor="@color/grey_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,TextContrastCheck,UseCompatTextViewDrawableXml" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!--VIP KIM CUONG-->
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_3_vip_kimcuong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    style="@style/Heading_2_Bold_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIP Kim Cương"
+                                    android:textColor="@color/red99"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Hiển thị trên cùng"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_giatien"
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="50.000đ/ngày"
+                                android:textColor="@color/grey_text"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llayout_dangtinmoi_3_vip_kimcuong_show_bangia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@color/grey_line"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Đăng dài ngày hơn, tiết kiệm hơn!"
+                                android:textColor="@color/grey_text"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_5_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_5_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="50.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_kimcuong_5_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_10_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_10_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="45.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_kimcuong_10_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    app:buttonTint="@color/selector_radio"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_15_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_kimcuong_15_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="40.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_kimcuong_15_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--VIP KIM VANG-->
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_3_vip_vang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    style="@style/Heading_2_Bold_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIP Vàng"
+                                    android:textColor="@color/gold"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <TextView
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Dưới VIP Kim Cương"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_giatien"
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="40.000đ/ngày"
+                                android:textColor="@color/grey_text"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llayout_dangtinmoi_3_vip_vang_show_bangia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@color/grey_line"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Đăng dài ngày hơn, tiết kiệm hơn!"
+                                android:textColor="@color/grey_text"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_5_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_5_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="40.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_vang_5_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_10_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_10_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="35.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_vang_10_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_15_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_vang_15_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="30.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_vang_15_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--VIP BAC-->
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_3_vip_bac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp"
+                        tools:ignore="TooManyViews">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    style="@style/Heading_2_Bold_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="VIP Bạc"
+                                    android:textColor="@color/silver"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <TextView
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Dưới VIP Vàng"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,VisualLintBounds,TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_giatien"
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20.000đ/ngày"
+                                android:textColor="@color/grey_text"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llayout_dangtinmoi_3_vip_bac_show_bangia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:src="@color/grey_line"
+                                tools:ignore="ContentDescription,VisualLintBounds" />
+
+                            <TextView
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Đăng dài ngày hơn, tiết kiệm hơn!"
+                                android:textColor="@color/grey_text"
+                                tools:ignore="HardcodedText,TooManyViews,VisualLintBounds,TextContrastCheck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                tools:ignore="VisualLintBounds">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_5_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_5_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="20.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_bac_5_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="VisualLintBounds,TouchTargetSizeCheck" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                tools:ignore="VisualLintBounds">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_10_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_10_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_bac_10_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="VisualLintBounds,TouchTargetSizeCheck" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                tools:ignore="VisualLintBounds">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_15_ngay"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="15 ngày"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_vip_bac_15_ngay_giatien"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10.000 đ/ngày"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,TextContrastCheck" />
+
+                                <RadioButton
+                                    android:id="@+id/radiobtn_dangtinmoi_3_vip_bac_15_ngay"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/grey_text"
+                                    app:buttonTint="@color/selector_radio"
+                                    tools:ignore="VisualLintBounds,TouchTargetSizeCheck" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--VIP thuong-->
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_3_thuong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="15dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    style="@style/Heading_2_Bold_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tin thường"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Hiển thị dưới cùng"
+                                    android:textColor="@color/grey_text"
+                                    tools:ignore="HardcodedText,VisualLintBounds,TextContrastCheck" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_3_tratheo_ngay_thuong_giatien"
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2.500đ/ngày"
+                                android:textColor="@color/grey_text"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày bắt đầu"
+                    android:textColor="@color/black"
+                    style="@style/Heading_3_Regular_black"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="15dp"
+                    tools:ignore="HardcodedText,TextViewEdits" />
+
+                <EditText
+                    android:id="@+id/edt_dangtinmoi_3_ngaybatdau"
+                    style="@style/Paragraph_Regular_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                    android:hint="01/01/2025"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/black"
+                    tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:src="@color/grey_line"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khuyến mãi"
+                        android:textColor="@color/black"
+                        style="@style/Paragraph_Regular_black"
+                        tools:ignore="HardcodedText,TextViewEdits" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_3_khuyenmai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chọn mã khuyến mãi"
+                        android:textColor="@color/black"
+                        style="@style/Paragraph_Regular_black"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/imgbtn_dangtinmoi_3_khuyenmai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:rotation="0"
+                        android:src="@drawable/ic_arrow"
+                        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@color/grey_line"
+                    android:layout_marginTop="0dp"
+                    tools:ignore="ContentDescription" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:paddingBottom="20dp"
+                    android:paddingStart="15dp"
+                    android:gravity="center_vertical"
+                    tools:ignore="RtlSymmetry">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng tiền"
+                        android:textColor="@color/black"
+                        style="@style/Heading_3_Regular_black"
+                        tools:ignore="HardcodedText" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_3_tongtien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50.000 đ"
+                        android:textColor="@color/red99"
+                        style="@style/Heading_2_Regular_black"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!--CONTENT 2-->
+        <LinearLayout
+            android:id="@+id/llayout_dangtinmoi_3_thanhtoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thanh toán"
+                android:textColor="@color/black"
+                style="@style/Heading_3_Bold_black"
+                tools:ignore="HardcodedText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                tools:ignore="UselessLeaf">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loại tin"
+                    style="@style/Heading_3_Regular_black"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_dangtinmoi_3_thanhtoan_loaitin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VIP Bạc"
+                    android:textColor="@color/black"
+                    style="@style/Heading_2_Bold_black"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf">
+
+                <TextView
+                    style="@style/Heading_3_Regular_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đơn giá"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/txt_dangtinmoi_3_thanhtoan_dongia"
+                    style="@style/Heading_3_Bold_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10.000 đ/ngày"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                tools:ignore="UselessLeaf">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số ngày đăng"
+                    style="@style/Heading_3_Regular_black"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_dangtinmoi_3_thanhtoan_songaydang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 ngày"
+                    android:textColor="@color/black"
+                    style="@style/Heading_3_Bold_black"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                tools:ignore="UselessLeaf">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian kết thúc"
+                    style="@style/Heading_3_Regular_black"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_dangtinmoi_3_thanhtoan_thoigianketthuc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19/07/2025"
+                    android:textColor="@color/black"
+                    style="@style/Heading_3_Bold_black"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@color/grey_line"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="UselessLeaf">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phí đăng tin"
+                        style="@style/Heading_3_Regular_black"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_3_thanhtoan_phidangtin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 đ"
+                        android:textColor="@color/black"
+                        style="@style/Heading_3_Bold_black"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@color/grey_line"
+                    android:layout_marginTop="15dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="UselessLeaf">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khuyến mãi"
+                        style="@style/Heading_3_Regular_black"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_3_thanhtoan_khuyenmai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 đ"
+                        android:textColor="@color/black"
+                        style="@style/Heading_3_Bold_black"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@color/grey_line"
+                    android:layout_marginTop="15dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="UselessLeaf">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng tiền"
+                        style="@style/Heading_3_Regular_black"
+                        android:textColor="@color/black"
+                        tools:ignore="HardcodedText" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_3_thanhtoan_tongtien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 đ"
+                        android:textColor="@color/black"
+                        style="@style/Heading_3_Bold_black"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@color/grey_line"
+                    android:layout_marginTop="15dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--BUTTON-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_dangtinmoi_3_quaylai"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:text="Quay lại"
+            android:textColor="@color/black"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_dangtinmoi_3_tieptuc"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:backgroundTint="@color/red99"
+            android:text="Tiếp tục"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="visible"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/btn_dangtinmoi_3_thanhtoan"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_10dp"
+            android:backgroundTint="@color/red99"
+            android:text="Thanh toán"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fg_dangky"
+    android:background="@color/white">
+    <include layout="@layout/layout_toolbar_backstack"
+        android:paddingTop="30dp"
+        android:id="@+id/included_dangky"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:padding="50dp"
+        android:elevation="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/included_dangky"
+        tools:ignore="ContentDescription,MissingConstraints" />
+    <LinearLayout
+        android:id="@+id/llayout_dangky_thongtindangnhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            style="@style/Heading_2_Bold_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Thông tin đăng nhập"
+            android:textColor="@color/red99"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/edt_dangky_thongtindangnhap_sdt"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:hint="Nhập số điện thoại"
+            android:paddingStart="10dp"
+            tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry,TextFields,TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/edt_dangky_thongtindangnhap_matkhau"
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="10dp"
+                android:hint="Nhập Mật Khẩu đăng nhập"
+                android:paddingStart="10dp"
+                android:inputType="textPassword"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill,HardcodedText,LabelFor,MissingConstraints,RtlSymmetry,TextFields,TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_eye_hide_show_pass"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@android:color/transparent"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_show_eye"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/edt_dangky_thongtindangnhap_nhaplaimatkhau"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="10dp"
+            android:inputType="textPassword"
+            android:hint="Nhập lại Mật Khẩu đăng nhập"
+            android:paddingStart="10dp"
+            tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry,TextFields,TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+        <TextView
+            android:id="@+id/txt_thongtindangnhap_canhbao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mật khẩu không trùng khớp. Vui lòng kiểm tra!"
+            style="@style/SmallText_Regular_black"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/redCD"
+            android:paddingStart="20dp"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:orientation="vertical"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <Button
+            android:id="@+id/btn_dangky_dangky"
+            style="@style/Paragraph_Bold_black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+            android:text="Đăng ký"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/red99"
+            tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,VisualLintButtonSize" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+            <TextView
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã có tài khoản? "
+                android:textColor="@color/grey_text"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_dangky_dangnhap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red99"
+                android:text="@string/text_dangnhap"
+                style="@style/Paragraph_Bold_black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

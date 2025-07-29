@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/fragment_taikhoan_baomat_dangtin">
+
+    <include layout="@layout/layout_toolbar_backstack"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_background"
+        android:scrollbars="none"
+        tools:ignore="ScrollViewCount">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:orientation="vertical"
+            tools:ignore="ScrollViewSize,UselessLeaf">
+            <LinearLayout
+                android:id="@+id/llayout_taikhoan_baomat_doimatkhau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="15dp"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đổi mật khẩu"
+                    style="@style/Heading_1_Bold_black"
+                    android:textColor="@color/red99"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+                <!--Mật khẩu hiện tại-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Mật khẩu hiện tại"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edt_taikhoan_baomat_matkhauhientai"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                    android:paddingStart="15dp"
+                    android:textSize="12dp"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+                <TextView
+                    android:id="@+id/txt_qltaikhoan_canhbao_matkhauHienTai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu không đúng"
+                    style="@style/Paragraph_Regular_black"
+                    android:textColor="@color/redCD"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="HardcodedText" />
+                <!--Mật khẩu mới-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Mật khẩu mới"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edt_taikhoan_baomat_matkhaumoi"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                    android:paddingStart="15dp"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="Autofill,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Nhập lại mật khẩu"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edt_taikhoan_baomat_nhaplaimatkhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                    android:paddingStart="15dp"
+                    android:textSize="12sp"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry,SpeakableTextPresentCheck,TextContrastCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize,DuplicateSpeakableTextCheck" />
+                <TextView
+                    android:id="@+id/txt_qltaikhoan_canhbao_matkhauMoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu không khớp"
+                    style="@style/Paragraph_Regular_black"
+                    android:textColor="@color/redCD"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="\u2022 Mật khẩu tối thiểu 8 ký tự"
+                    android:textColor="@color/grey_text"
+                    style="@style/Paragraph_Regular_black"
+                    tools:ignore="HardcodedText,SmallSp,TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="\u2022 Chứa ít nhất 1 ký tự viết hoa"
+                    android:textColor="@color/grey_text"
+                    style="@style/Paragraph_Regular_black"
+                    tools:ignore="HardcodedText,SmallSp,TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="\u2022 Chứa ít nhất 1 ký tự số"
+                    android:textColor="@color/grey_text"
+                    style="@style/Paragraph_Regular_black"
+                    tools:ignore="HardcodedText,SmallSp,TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/btn_taikhoan_baomat_luu"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_button_redborder_radius_30dp"
+                    android:backgroundTint="@color/red99"
+                    android:text="Lưu thay đổi"
+                    style="@style/Paragraph_Bold_black"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@null"
+                    android:padding="0dp"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TouchTargetSizeCheck,VisualLintButtonSize" />
+            </LinearLayout>
+            <!--Khoá tài khoản-->
+            <LinearLayout
+                android:id="@+id/llayout_taikhoan_baomat_khoataikhoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:padding="15dp"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yêu cầu khoá tài khoản"
+                    style="@style/Heading_1_Bold_black"
+                    android:textColor="@color/red99"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Nhập mật khẩu hiện tại"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+                <EditText
+                    android:id="@+id/edt_qlthongtintk_khoaTaiKhoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                    style="@style/Heading_3_Regular_black"
+                    android:paddingStart="10dp"
+                    tools:ignore="Autofill,DuplicateIds,HardcodedText,LabelFor,RtlSymmetry,SpUsage,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                <Button
+                    android:id="@+id/btn_taikhoan_baomat_khoataikhoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_button_redborder_radius_30dp"
+                    android:backgroundTint="@color/red99"
+                    android:text="Khoá tài khoản"
+                    android:textColor="@color/white"
+                    style="@style/Paragraph_Bold_black"
+                    android:padding="0dp"
+                    app:backgroundTint="@null"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TouchTargetSizeCheck,VisualLintButtonSize" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lưu ý"
+                    style="@style/Paragraph_Bold_black"
+                    android:layout_marginTop="15dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u2022"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            tools:ignore="HardcodedText"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Các tin đăng của quý khách vẫn được tiếp tục hiển thị tới khi hết hạn hoặc tài khoản bị khoá"
+                            style="@style/Paragraph_Regular_black"
+                            android:lineSpacingExtra="2dp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u2022"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            tools:ignore="HardcodedText"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Số dư tiền (nếu có) trong taì khoản của quý khách sẽ được lưu giữ 90 ngày, sau 90 ngày sẽ không được hoàn trả"
+                            style="@style/Paragraph_Regular_black"
+                            android:lineSpacingExtra="2dp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u2022"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            tools:ignore="HardcodedText"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Số điện thoại trong tài khoản này sẽ không được đăng ký tài khoản mới kể cả số điện thoại phụ"
+                            style="@style/Paragraph_Regular_black"
+                            android:lineSpacingExtra="2dp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u2022"
+                            android:textSize="11sp"
+                            android:textColor="@color/black"
+                            tools:ignore="HardcodedText"
+                            android:layout_marginEnd="5dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nếu quý khách muốn mở khoá tài khoản thì liên hệ CSKH 1900 1000"
+                            style="@style/Paragraph_Regular_black"
+                            android:lineSpacingExtra="2dp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llayout_taikhoan_baomat_xoataikhoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:padding="15dp"
+                tools:ignore="UseCompoundDrawables,UselessParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yêu cầu xoá tài khoản"
+                    style="@style/Heading_1_Bold_black"
+                    android:textColor="@color/red99"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/yeucauxoataikhoan"
+                    android:textColor="@color/black"
+                    style="@style/Paragraph_Regular_black"
+                    tools:ignore="HardcodedText,VisualLintLongText" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/checkbox_taikhoan_baomat_xoataikhoan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="15dp"
+                        app:buttonTint="@color/selector_checkbox"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/xacnhan_xoataikhoan"
+                        style="@style/Paragraph_Regular_black"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_taikhoan_baomat_xoataikhoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_button_redborder_radius_30dp"
+                    android:backgroundTint="@color/red99"
+                    android:text="Xoá tài khoản"
+                    android:textColor="@color/white"
+                    style="@style/Paragraph_Bold_black"
+                    android:padding="0dp"
+                    app:backgroundTint="@null"
+                    tools:ignore="HardcodedText,SpUsage,TextSizeCheck,TouchTargetSizeCheck,VisualLintButtonSize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

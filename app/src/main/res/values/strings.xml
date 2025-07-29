@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">App_ChoThue_QL_Tro</string>
+    <string name="text_dangky"><u>Đăng ký</u></string>
+    <string name="text_dangnhap"><u>Đăng nhập</u></string>
+    <string name="pagraph_dangky_checkbox_1">Bằng việc ấn "Tiếp tục", tôi xin xác nhận đã đọc, hiểu rõ và đồng ý với toàn bộ nội dung sau:</string>
+    <string name="pagraph_dangky_checkbox_1_1">Không sử dụng giấy tờ tùy thân giả mạo, không chính chủ</string>
+    <string name="pagraph_dangky_checkbox_1_2">Không cho thuê, cho mượn tài khoản của mình để giao dịch bất hợp pháp</string>
+
+    <string name="yeucauxoataikhoan">Gửi yêu cầu xoá toàn bộ thông tin tài khoản. Sau khi được xử lý, toan bộ thông tin sẽ được xoá và không thể hoàn tác. Các thông tin trong tài khoản này không được tạo tài khoản mới trong 90 ngày</string>
+    <string name="xacnhan_xoataikhoan">Bạn đã đọc kỹ nội dung và vẫn muốn xoá tài khoản?</string>
+    <string name="note_taikhoan_dangtin" tools:ignore="TypographyEllipsis">Dành cho quý khách muốn đăng tin cho thuê/ bán/ quản lý với các nhà/ căn hộ/ phòng trọ...</string>
+    <string name="note_taikhoan_timkiem">Dành cho quý khách muốn tìm kiếm nhà/ căn hộ/ phòng trọ được đăng cho thuê/ bán</string>
+    <string name="title_saved_posts">Tin đã lưu</string>
+    <string name="empty_saved_title">Lưu lại tin đăng bạn quan tâm</string>
+    <string name="empty_saved_desc">Nhấn vào biểu tượng trái tim khi lướt tìm kiếm để lưu lại tin đăng.</string>
+    <string name="chinh_sua_anh"><u>Chỉnh sửa ảnh</u></string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/grey_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="60dp"
+        android:paddingBottom="15dp"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quản lí tin đăng"
+            android:textColor="@color/black"
+            style="@style/Heading_1_Bold_black"
+            tools:ignore="HardcodedText"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_bell"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        tools:ignore="UselessLeaf">
+
+        <EditText
+            android:id="@+id/edt_qltindang_search"
+            style="@style/Paragraph_Bold_black"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Nhập mã tin hoặc tiêu đề tin"
+            android:inputType="text"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            tools:ignore="Autofill,HardcodedText,TextFields,TouchTargetSizeCheck,TextContrastCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn_qltindang_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/customer_circle_noborder"
+            android:elevation="5dp"
+            android:src="@drawable/ic_add_ring_red"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="UselessLeaf">
+
+        <CheckBox
+            android:id="@+id/checkbox_qltindang_all"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:buttonTint="@color/selector_checkbox"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Paragraph_Regular_black"
+            android:textColor="@color/black"
+            android:text="Tất cả"
+            android:layout_marginStart="10dp"
+            tools:ignore="HardcodedText" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn_qltindang_filter"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_filter"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <ImageButton
+            android:id="@+id/imgbtn_qltindang_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_trash"
+            android:scaleType="centerInside"
+            android:layout_marginStart="20dp"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview_qltindang_show_tindang"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:paddingTop="20dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

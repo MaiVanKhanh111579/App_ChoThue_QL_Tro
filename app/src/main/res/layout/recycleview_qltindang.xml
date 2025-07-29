@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/customer_background_noborder_radius_10dp"
+    android:gravity="center_vertical"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:padding="15dp"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/checkbox_recycleview_qltindang_select"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="15dp"
+        app:buttonTint="@color/selector_checkbox"
+        tools:ignore="TouchTargetSizeCheck" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/txt_recycleview_qltindang_maTinDang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã tin đăng"
+                android:layout_marginEnd="10dp"
+                style="@style/Paragraph_Bold_black"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Paragraph_Bold_black"
+                android:text="-"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/txt_recycleview_qltindang_hoVaTen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày đăng"
+                android:layout_marginStart="10dp"
+                style="@style/Paragraph_Regular_black"
+                tools:ignore="HardcodedText"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txt_recycleview_qltindang_tieuDe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Paragraph_Regular_black"
+            android:layout_marginTop="5dp"
+            android:text="Tiêu đề"
+            android:maxLines="2"
+            android:maxWidth="270dp"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <ImageButton
+        android:id="@+id/imgbtn_recycleview_qltindang_arrowNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:rotation="0"
+        android:translationZ="10dp"
+        android:src="@drawable/ic_arrow"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+</LinearLayout>

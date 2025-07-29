@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Heading 1-->
+    <style name="Heading_1_Bold_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+    <style name="Heading_1_Regular_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+    <style name="Heading_1_Light_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <!--Heading 2-->
+    <style name="Heading_2_Bold_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="Heading_2_Regular_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="Heading_2_Light_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!--Heading 3-->
+    <style name="Heading_3_Bold_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="Heading_3_Regular_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="Heading_3_Light_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!--Paragraph-->
+    <style name="Paragraph_Bold_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Paragraph_Regular_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Paragraph_Light_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!--Small Text-->
+    <style name="SmallText_Bold_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="SmallText_Regular_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="SmallText_Light_black">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+</resources>

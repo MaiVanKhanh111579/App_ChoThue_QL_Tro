@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_dangtin"
+    app:startDestination="@id/navigation_timkiem">
+
+    <!--Các Item chính-->
+    <fragment
+        android:id="@+id/navigation_timkiem"
+        android:name="Fg_TimKiem.TimKiemFg"
+        tools:layout="@layout/fg_timkiem"
+        android:label="Tìm kiếm">
+        <action
+            android:id="@+id/action_navigation_timkiem_to_navigation_chitiet_tindang"
+            app:destination="@id/navigation_chitiet_tindang" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_luutin"
+        android:name="Fg_LuuTin.LuuTinFg"
+        tools:layout="@layout/fg_luutin"
+        android:label="Lưu tin"/>
+    <fragment
+        android:id="@+id/navigation_dango"
+        android:name="Fg_DangO.DangOFg"
+        tools:layout="@layout/fg_dango"
+        android:label="Đang ở"/>
+    <fragment
+        android:id="@+id/navigation_taikhoan_timkiem"
+        android:name="Fg_TaiKhoan.TaiKhoanFg"
+        tools:layout="@layout/fg_taikhoan"
+        android:label="Tài khoản">
+        <action
+            android:id="@+id/action_navigation_taikhoan_timkiem_to_navigation_qlthongtin"
+            app:destination="@id/navigation_qlthongtin" />
+        <action
+            android:id="@+id/action_navigation_taikhoan_timkiem_to_navigation_qlmatkhau"
+            app:destination="@id/navigation_qlmatkhau" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dangnhap"
+        android:name="User.DangNhapFg"
+        tools:layout="@layout/fg_dangnhap"
+        android:label="Đăng nhập"/>
+    <fragment
+        android:id="@+id/navigation_dangky"
+        android:name="User.DangKyFg"
+        tools:layout="@layout/fg_dangky"
+        android:label="Đăng ký"/>
+
+    <!--Quản lý thông tin tài khoản-->
+    <fragment
+        android:id="@+id/navigation_qlthongtin"
+        android:name="Fg_TaiKhoan.QLThongTinFg"
+        tools:layout="@layout/fg_taikhoan_qlthongtin"
+        android:label="Thông tin"/>
+    <fragment
+        android:id="@+id/navigation_qlmatkhau"
+        android:name="Fg_TaiKhoan.QLMatKhauFg"
+        tools:layout="@layout/fg_taikhoan_qlmatkhau"
+        android:label="Mật khẩu"/>
+
+    <fragment
+        android:id="@+id/navigation_chitiet_tindang"
+        android:name="Fg_QLTinDang.ChiTiet_TinDang_Fg"
+        tools:layout="@layout/fg_chitiet_tindang"
+        android:label="Chi tiết tin đăng">
+        <action
+            android:id="@+id/action_navigation_chitiet_tindang_to_navigation_datcoctruoc"
+            app:destination="@id/navigation_datcoctruoc" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_datcoctruoc"
+        android:name="Fg_ThanhToan.DatCocTruocFg"
+        tools:layout="@layout/fg_datcoctruoc"
+        android:label="Đặt cọc trước">
+        <action
+            android:id="@+id/action_navigation_datcoctruoc_to_navigation_phuongthucthanhtoan"
+            app:destination="@id/navigation_phuongthucthanhtoan" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_ketquagiaodich"
+        android:name="Fg_ThanhToan.KetQuaGiaoDichFg"
+        tools:layout="@layout/fg_ketquagiaodich"
+        android:label="Kết quả giao dịch"/>
+    <fragment
+        android:id="@+id/navigation_phuongthucthanhtoan"
+        android:name="Fg_ThanhToan.PhuongThucThanhToanFg"
+        tools:layout="@layout/fg_phuongthucthanhtoan"
+        android:label="Phương thức thanh toán">
+        <action
+            android:id="@+id/action_navigation_phuongthucthanhtoan_to_navigation_ketquagiaodich"
+            app:destination="@id/navigation_ketquagiaodich" />
+    </fragment>
+</navigation>

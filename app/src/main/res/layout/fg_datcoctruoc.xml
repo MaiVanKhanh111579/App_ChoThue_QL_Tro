@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fg_datcoctruoc">
+    <include layout="@layout/layout_toolbar_backstack"
+        android:id="@+id/included_fg_datcoctruoc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/included_fg_datcoctruoc">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin nhà / phòng trọ"
+                android:layout_marginBottom="10dp"
+                style="@style/Heading_3_Regular_black"
+                android:textColor="@color/red99"
+                tools:ignore="HardcodedText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Địa chỉ Nhà / Phòng"
+                    android:layout_marginBottom="5dp"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txt_datcoctruoc_diachi"
+                    style="@style/Heading_3_Regular_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:text="2,500,000 VNĐ"
+                    tools:ignore="HardcodedText,TextViewEdits,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiền thuê"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_datcoctruoc_tienthue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="2,500,000 VNĐ/Tháng"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/customer_line"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin đặt cọc"
+                android:layout_marginBottom="10dp"
+                style="@style/Heading_3_Regular_black"
+                android:textColor="@color/red99"
+                tools:ignore="HardcodedText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số tiền đặt cọc"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_datcoctruoc_sotiendatcoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="2,500,000 VNĐ"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                tools:ignore="UselessParent">
+                <TextView
+                    style="@style/Heading_3_Regular_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày đặt cọc"
+                    android:textColor="@color/grey_text"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_datcoctruoc_ngaydatcoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="26/07/2025"
+                    android:textColor="@color/grey_text"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/customer_line"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin liên hệ"
+                android:layout_marginBottom="10dp"
+                style="@style/Heading_3_Regular_black"
+                android:textColor="@color/red99"
+                tools:ignore="HardcodedText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Họ và tên"
+                    style="@style/Heading_3_Regular_black"
+                    tools:ignore="HardcodedText" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_datcoctruoc_hovaten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="2,500,000 VNĐ"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                tools:ignore="UselessParent">
+                <TextView
+                    style="@style/Heading_3_Regular_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số điện thoại"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/txt_datcoctruoc_sdt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="000000000"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                tools:ignore="UselessParent">
+                <TextView
+                    style="@style/Heading_3_Regular_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày xem Nhà / Phòng"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/edt_datcoctruoc_ngaylienhe"
+                    style="@style/Heading_3_Bold_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                    android:gravity="center"
+                    android:inputType="date"
+                    android:maxWidth="150dp"
+                    android:maxLines="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="26/08/2025"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,TextSizeCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="40dp">
+
+        <Button
+            android:id="@+id/btn_datcoctruoc_quaylai"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:text="Quay lại"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_datcoctruoc_tieptuc"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:backgroundTint="@color/red99"
+            android:text="Tiếp tục"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

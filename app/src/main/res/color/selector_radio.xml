@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state: màu tick -->
+    <item android:color="@color/red99" android:state_checked="true"/>
+    <!-- Unchecked state: màu viền -->
+    <item android:color="@color/black"/>
+</selector>

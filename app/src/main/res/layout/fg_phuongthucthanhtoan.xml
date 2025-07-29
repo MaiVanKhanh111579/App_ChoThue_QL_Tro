@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fg_phuongthucthanhtoan">
+    <include layout="@layout/layout_toolbar_backstack"
+        android:id="@+id/included_fg_phuongthucthanhtoan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="30dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@id/included_fg_phuongthucthanhtoan"
+        tools:ignore="UselessLeaf">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Heading_3_Bold_black"
+            android:text="Vui lòng chọn phương thức thanh toán"
+            android:layout_gravity="center_horizontal"
+            tools:ignore="HardcodedText" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <RadioButton
+                android:id="@+id/radio_phuongthucthanhtoan_nganhang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chuyển khoản ngân hàng"
+                style="@style/Heading_3_Regular_black"
+                android:paddingStart="10dp"
+                tools:ignore="HardcodedText,RtlSymmetry,VisualLintButtonSize" />
+            <RadioButton
+                android:id="@+id/radio_phuongthucthanhtoan_bangvidientu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bằng ví điện tử MOMO"
+                style="@style/Heading_3_Regular_black"
+                android:paddingStart="10dp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText,RtlSymmetry,VisualLintButtonSize" />
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:id="@+id/img_qr_code"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/txt_countdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Thời gian còn lại: 05:00"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="40dp">
+
+        <Button
+            android:id="@+id/btn_phuongthucthanhtoan_quaylai"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:text="Quay lại"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_phuongthucthanhtoan_tieptuc"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:backgroundTint="@color/red99"
+            android:text="Tiếp tục"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

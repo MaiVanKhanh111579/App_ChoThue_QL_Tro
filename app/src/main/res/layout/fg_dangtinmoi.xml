@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background"
+    android:id="@+id/fg_dangtinmoi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessLeaf">
+        <!--TOOLBAR-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_dangtinmoi_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingTop="60dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Heading_1_Bold_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tạo tin đăng"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txt_dangtinmoi_thoat"
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:background="@drawable/customer_background_noborder_radius_10dp"
+                android:gravity="center"
+                android:text="Thoát"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--BUOC-->
+        <LinearLayout
+            android:id="@+id/llayout_dangtinmoi_buoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            tools:ignore="RtlSymmetry,UselessLeaf">
+
+            <TextView
+                android:id="@+id/txt_dangtinmoi_cac_buoc"
+                style="@style/Heading_3_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Bước 1. Thông tin phòng/ nhà trọ"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/txt_dangtinmoi_line_buoc1"
+                    android:layout_width="120dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/customer_line"
+                    android:backgroundTint="@color/red99"
+                    tools:ignore="ContentDescription" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/txt_dangtinmoi_line_buoc2"
+                    android:layout_width="120dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/customer_line"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/txt_dangtinmoi_line_buoc3"
+                    android:layout_width="120dp"
+                    android:layout_height="5dp"
+                    android:background="@drawable/customer_line"
+                    tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--CONTENT-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp"
+            android:scrollbars="none"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="ScrollViewSize">
+
+                <!--ĐỊA CHỈ NHÀ-->
+                <LinearLayout
+                    android:id="@+id/llayout_dangtinmoi_diachi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible"
+                    tools:ignore="RtlSymmetry,UselessLeaf">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_dangtinmoi_button_diachi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            style="@style/Heading_3_Bold_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Địa chỉ nhà/ trọ cho thuê"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,MissingConstraints" />
+
+                        <ImageButton
+                            android:id="@+id/imgbtn_arrow_down_diachi"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow"
+                            android:rotation="90"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_title_diachi"
+                        style="@style/Paragraph_Regular_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nhấp để chọn"
+                        android:textColor="@color/blue_text"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText,TextContrastCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_show_diachi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <!--So Phong-->
+                        <TextView
+                            style="@style/Heading_3_Regular_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Số phòng (nếu có)"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/edt_dangtinmoi_sophong"
+                            style="@style/Paragraph_Regular_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                            android:hint="Ví dụ: 202"
+                            android:paddingStart="10dp"
+                            android:textColor="@color/black"
+                            tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,TouchTargetSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+                        <!--Dia Chi-->
+                        <TextView
+                            style="@style/Heading_3_Regular_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Địa chỉ nhà/ phòng trọ"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/edt_dangtinmoi_diachi"
+                            style="@style/Paragraph_Regular_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                            android:hint="Nhập địa chỉ phòng/ nhà trọ (số, đường, khu phố, phường)"
+                            android:inputType="text"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize,DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+                        <!--Thanh pho-->
+                        <!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginBottom="15dp">-->
+
+                        <!--                            <com.google.android.material.textfield.MaterialAutoCompleteTextView-->
+                        <!--                                android:id="@+id/auto_dangtinmoi_thanhpho"-->
+                        <!--                                style="@style/Paragraph_Regular_black"-->
+                        <!--                                android:layout_width="match_parent"-->
+                        <!--                                android:layout_height="40dp"-->
+                        <!--                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"-->
+                        <!--                                android:hint="Nhập thành phố"-->
+                        <!--                                android:paddingStart="10dp"-->
+                        <!--                                android:paddingEnd="50dp"-->
+                        <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                                app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                                tools:ignore="HardcodedText,VisualLintTextFieldSize,TextContrastCheck,TouchTargetSizeCheck" />-->
+
+                        <!--                            <ImageButton-->
+                        <!--                                android:id="@+id/imgbtn_dangtinmoi_arrow"-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:background="@android:color/transparent"-->
+                        <!--                                android:src="@drawable/ic_arrow_down_black"-->
+                        <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                                app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+                        <!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                        <!--dia chi hien thi-->
+                        <TextView
+                            style="@style/Heading_3_Regular_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Địa chỉ muốn hiển thị trên tin"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,MissingConstraints" />
+
+                        <EditText
+                            android:id="@+id/edt_dangtinmoi_diachi_hienthi"
+                            style="@style/Paragraph_Regular_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                            android:hint="Nhập địa chỉ phòng/ nhà trọ (số, đường, khu phố, phường)"
+                            android:inputType="text"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--THÔNG TIN CHÍNH-->
+                <LinearLayout
+                    android:id="@+id/llayout_dangtinmoi_thongtinchinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible"
+                    tools:ignore="UselessLeaf">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_dangtinmoi_button_thongtinchinh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/Heading_3_Bold_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thông tin chính"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,MissingConstraints" />
+
+                        <ImageButton
+                            android:id="@+id/imgbtn_arrow_down_thongtinchinh"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow"
+                            android:rotation="90"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_title_thongtinchinh"
+                        style="@style/Paragraph_Regular_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Nhấp để chọn"
+                        android:textColor="@color/blue_text"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText,TextContrastCheck" />
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_show_thongtinchinh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chọn loại"
+                                tools:ignore="HardcodedText" />
+
+                            <LinearLayout
+                                android:id="@+id/llayout_dangtinmoi_show_loaiphong"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:visibility="visible"
+                                tools:ignore="UselessParent">
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_chon_phongtro"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:text="Phòng trọ"
+                                    tools:ignore="HardcodedText,RtlSymmetry,TextSizeCheck" />
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_chon_nhatro"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:text="Nhà trọ"
+                                    tools:ignore="HardcodedText,RtlSymmetry,TextSizeCheck" />
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Diện tích-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Diện tích"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="2dp">
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_dientich"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    style="@style/Paragraph_Regular_black"
+                                    android:backgroundTint="@color/white"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="Autofill,TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                                <TextView
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="40dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:backgroundTint="@color/grey_background"
+                                    android:gravity="center"
+                                    android:text="m\u00B2"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <!--Mức giá-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Giá cho thuê"
+                                tools:ignore="HardcodedText" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="2dp">
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_giathue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:backgroundTint="@color/white"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="Autofill,TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                                <TextView
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="50dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:backgroundTint="@color/grey_background"
+                                    android:gravity="center"
+                                    android:text="VNĐ"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_show_tinhtien_phong"
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Khách thuê sẽ đóng 0 VNĐ/ tháng"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--THONG TIN KHAC-->
+                <LinearLayout
+                    android:id="@+id/llayout_dangtinmoi_thongtinkhac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible"
+                    tools:ignore="TooManyViews,UselessLeaf">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_dangtinmoi_button_thongtinkhac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            style="@style/Heading_3_Bold_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thông tin khác"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                        <ImageButton
+                            android:id="@+id/imgbtn_arrow_down_thongtinkhac"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow"
+                            android:rotation="90"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_title_thongtinkhac"
+                        style="@style/Paragraph_Regular_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Nhấp để chọn"
+                        android:textColor="@color/blue_text"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText,TextContrastCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_show_thongtinkhac"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--Nội thất-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nội thất"
+                                android:layout_marginTop="20dp"
+                                tools:ignore="HardcodedText" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_noithat_daydu"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="110dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Đầy đủ"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:ignore="InefficientWeight" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_noithat_coban"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="110dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Cơ bản"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:ignore="InefficientWeight" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_noithat_khongnoithat"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="150dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Không nội thất"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+                            </LinearLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                style="@style/Paragraph_Regular_black"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:padding="2dp">
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_noithat_themnoithat"
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="30dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:hint="Thêm nội thất (nếu có)"
+                                    android:paddingStart="10dp"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields,TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+                                <ImageButton
+                                    android:id="@+id/imgbtn_dangtinmoi_thongtinkhac_close_1"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@android:color/transparent"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_close"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription,MissingConstraints,RtlSymmetry,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <!--Loại phòng-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Loại phòng"
+                                tools:ignore="HardcodedText" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:paddingTop="2dp"
+                                android:gravity="center"
+                                android:paddingBottom="2dp"
+                                android:orientation="horizontal">
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:ignore="InefficientWeight" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_noithat_dungchung"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="150dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Dùng chung"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText" />
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:ignore="InefficientWeight" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangtinmoi_noithat_dungrieng"
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="150dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Dùng riêng"
+                                    android:textColor="@color/black"
+                                    tools:ignore="HardcodedText,TextSizeCheck" />
+
+                                <Space
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    tools:ignore="InefficientWeight" />
+                            </LinearLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:padding="2dp">
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_loaiphong_thongtinkhac"
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="30dp"
+                                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:hint="Thông tin khác"
+                                    android:paddingStart="10dp"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields,TextContrastCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck,VisualLintTextFieldSize" />
+
+                                <ImageButton
+                                    android:id="@+id/imgbtn_dangtinmoi_thongtinkhac_close_2"
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:background="@android:color/transparent"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_close"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="ContentDescription,MissingConstraints,RtlSymmetry,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <!--Cấu trúc-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <!--Số phòng ngủ-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                tools:ignore="UselessParent">
+
+                                <TextView
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Số người có thể ở"
+                                    tools:ignore="HardcodedText" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical|end"
+                                    android:orientation="horizontal"
+                                    android:paddingEnd="10dp"
+                                    tools:ignore="RtlSymmetry">
+
+                                    <ImageButton
+                                        android:id="@+id/imgbtn_dangtinmoi_songuoio_minus"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/customer_circle_noborder"
+                                        android:elevation="1dp"
+                                        android:src="@drawable/ic_minus"
+                                        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TooDeepLayout,TouchTargetSizeCheck,ImageContrastCheck" />
+
+                                    <EditText
+                                        android:id="@+id/edt_dangtinmoi_songuoio"
+                                        style="@style/Paragraph_Regular_black"
+                                        android:layout_width="20dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:background="@drawable/customer_background_noborder_radius_10dp"
+                                        android:gravity="center"
+                                        android:backgroundTint="@color/white"
+                                        android:text="0"
+                                        android:inputType="number"
+                                        tools:ignore="Autofill,HardcodedText,TextFields,TouchTargetSizeCheck" />
+
+                                    <ImageButton
+                                        android:id="@+id/imgbtn_dangtinmoi_songuoio_plus"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_margin="3dp"
+                                        android:background="@drawable/customer_circle_noborder"
+                                        android:elevation="1dp"
+                                        android:src="@drawable/ic_plus"
+                                        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--Dịch vụ-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+                            <!--Dien-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Mức giá điện"
+                                    android:textColor="@color/red99"
+                                    tools:ignore="HardcodedText" />
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_thongtinkhac_mucgiadien"
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                    android:hint="Nhập giá điện"
+                                    android:paddingStart="10dp"
+                                    android:textColor="@color/black"
+                                    tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry,TextFields,TextContrastCheck,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+                            </LinearLayout>
+                            <!--Nước-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Mức giá nước"
+                                    android:textColor="@color/red99"
+                                    tools:ignore="HardcodedText" />
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_thongtinkhac_mucgianuoc"
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                    android:hint="Nhập giá nước"
+                                    android:paddingStart="10dp"
+                                    android:textColor="@color/black"
+                                    tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry,TextFields,TextContrastCheck,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+                            </LinearLayout>
+                            <!--internet-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/Heading_3_Regular_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Mức giá internet"
+                                    android:textColor="@color/red99"
+                                    tools:ignore="HardcodedText" />
+
+                                <EditText
+                                    android:id="@+id/edt_dangtinmoi_thongtinkhac_mucgiainternet"
+                                    style="@style/Paragraph_Regular_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="35dp"
+                                    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                    android:hint="Nhập giá internet"
+                                    android:paddingStart="10dp"
+                                    android:textColor="@color/black"
+                                    tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry,TextFields,TextContrastCheck,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--Tiện ích-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tiện ích"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/red99"
+                                tools:ignore="HardcodedText" />
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycleview_dangtinmoi_tienich"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:ignore="NestedScrolling" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--THÔNG TIN LIÊN HỆ-->
+                <LinearLayout
+                    android:id="@+id/llayout_dangtinmoi_thongtinlienhe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_dangtinmoi_button_thongtinlienhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            style="@style/Heading_3_Bold_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thông tin liên hệ"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                        <ImageButton
+                            android:id="@+id/imgbtn_arrow_down_thongtinlienhe"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow"
+                            android:rotation="90"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_title_thongtinlienhe"
+                        style="@style/Paragraph_Regular_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Nhấp để chọn"
+                        android:textColor="@color/blue_text"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText,TextContrastCheck" />
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_show_thongtinlienhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Tên liên hệ"
+                                android:textColor="@color/red99"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/edt_dangtinmoi_thongtinlienhe_hovaten"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                style="@style/Paragraph_Regular_black"
+                                tools:ignore="Autofill,TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Email"
+                                android:textColor="@color/red99"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/edt_dangtinmoi_thongtinlienhe_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                tools:ignore="Autofill,TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Số điện thoại"
+                                android:textColor="@color/red99"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/edt_dangtinmoi_thongtinlienhe_sdt"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                tools:ignore="Autofill,TextFields,SpeakableTextPresentCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--TIÊU ĐỀ & MÔ TẢ-->
+                <LinearLayout
+                    android:id="@+id/llayout_dangtinmoi_tieude_va_mota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/customer_background_noborder_radius_10dp"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraint_dangtinmoi_button_tieude_va_mota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            style="@style/Heading_3_Bold_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tiêu đề và Mô tả"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+                        <ImageButton
+                            android:id="@+id/imgbtn_arrow_down_tieude_va_mota"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_arrow"
+                            android:rotation="90"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ContentDescription,MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txt_dangtinmoi_title_tieude_va_mota"
+                        style="@style/Paragraph_Regular_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Nhấp để chọn"
+                        android:textColor="@color/blue_text"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText,TextContrastCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/llayout_dangtinmoi_show_tieude_va_mota"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Tiêu đề"
+                                android:textColor="@color/red99"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/edt_dangtinmoi_tieude_va_mota_tieude"
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:hint="Tiêu đề hiển thị chính (VD: Cho thuê phòng trọ 10m2 - gần Trường HUFLIT"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:textColor="@color/black"
+                                tools:ignore="Autofill,HardcodedText,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize,TextContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_tieude_va_mota_tieude_chuthich"
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Tối thiểu 30 ký tự, tối đa 99 ký tự"
+                                android:textColor="@color/grey_text"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/Heading_3_Regular_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Mô tả"
+                                android:textColor="@color/red99"
+                                tools:ignore="HardcodedText" />
+
+                            <EditText
+                                android:id="@+id/edt_dangtinmoi_tieude_va_mota_mota"
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                                android:gravity="start|top"
+                                android:hint="Mô tả chi tiết về: loại hình, diện tích, tiện ích, tình trạng nội thất,..."
+                                android:paddingStart="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/black"
+                                tools:ignore="Autofill,HardcodedText,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize,TextContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/txt_dangtinmoi_tieude_va_mota_mota_chuthich"
+                                style="@style/Paragraph_Regular_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Tối thiểu 30 ký tự, tối đa 3000 ký tự"
+                                android:textColor="@color/grey_text"
+                                tools:ignore="HardcodedText,TextContrastCheck" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--BUTTON-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingTop="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_dangtinmoi_tieptuc"
+            style="@style/Heading_3_Regular_black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:backgroundTint="@color/red99"
+            android:text="Tiếp tục"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

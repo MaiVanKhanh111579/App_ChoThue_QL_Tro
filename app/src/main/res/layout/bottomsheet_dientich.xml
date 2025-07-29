@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diện tích"
+        style="@style/Heading_2_Bold_black"
+        android:paddingBottom="8dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <RadioGroup
+        android:id="@+id/rg_area_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_area_5_9"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="5 - 9 m²"
+            style="@style/Heading_3_Regular_black"
+            android:padding="12dp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_area_10_19"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="10 - 19 m²"
+            style="@style/Heading_3_Regular_black"
+            android:padding="12dp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_area_20_29"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="20 - 29 m²"
+            style="@style/Heading_3_Regular_black"
+            android:padding="12dp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/rb_area_above_30"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Trên 30 m²"
+            style="@style/Heading_3_Regular_black"
+            android:padding="12dp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_apply_area_range"
+        android:layout_width="match_parent"
+        android:text="Áp dụng"
+        android:layout_height="40dp"
+        style="@style/Heading_3_Regular_black"
+        android:background="@drawable/customer_button_redborder_radius_10dp"
+        app:backgroundTint="@null"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+</LinearLayout>

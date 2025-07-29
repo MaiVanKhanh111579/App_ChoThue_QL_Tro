@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fg_dangnhap"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llayout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:id="@+id/txt_dangnhap_thoat"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@drawable/customer_background_noborder_radius_10dp"
+            android:backgroundTint="@color/grey_background"
+            android:gravity="center"
+            android:text="Thoát"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_dangnhap"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/logo"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llayout_1"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="ContentDescription,RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/llayout_dangnhap_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_dangnhap">
+        <TextView
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="Vui lòng nhập Số điện thoại để đăng nhập!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+        <EditText
+            android:id="@+id/edt_dangnhap_sdt"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+            android:hint="Nhập số điện thoại"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:inputType="textEmailAddress"
+            tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextContrastCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp">
+            <EditText
+                android:id="@+id/edt_dangnhap_nhapmatkhau"
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+                android:hint="Nhập mật khẩu"
+                android:paddingStart="15dp"
+                android:inputType="text"
+                android:paddingEnd="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="Autofill,HardcodedText,MissingConstraints,RtlSymmetry,TextContrastCheck,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_dangnhap_showhide_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="15dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_show_eye"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/txt_dangnhap_canhbao_matkhau"
+            style="@style/SmallText_Light_black"
+            android:textColor="@color/red99"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:text="Email hoặc mật khẩu không đúng. Vui lòng nhập lại!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints,RtlSymmetry" />
+        <TextView
+            android:id="@+id/txt_dangnhap_quenmatkhau"
+            style="@style/Paragraph_Bold_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Quên mật khẩu?"
+            android:textColor="@color/blue_text"
+            tools:ignore="HardcodedText,RtlSymmetry,TextContrastCheck" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbutton_dangnhap_btn_dangnhap"
+            style="@style/Paragraph_Bold_black"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:padding="0dp"
+            android:layout_marginBottom="15dp"
+            android:text="Đăng nhập"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/red99"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+            <TextView
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bạn chưa có tài khoản? "
+                android:textColor="@color/grey_text"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+            <TextView
+                android:id="@+id/txt_dangnhap_dangky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red99"
+                android:text="@string/text_dangky"
+                style="@style/Paragraph_Bold_black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

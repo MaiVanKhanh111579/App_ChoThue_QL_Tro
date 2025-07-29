@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/qltindang_chinhsua_danhsachanh">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_qltindang_chinhsua_danhsachanh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:paddingTop="10dp"
+        android:translationZ="2dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_thoat"
+            style="@style/Paragraph_Regular_black"
+            android:text="Thoát"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_themanh"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="150dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:backgroundTint="@color/red99"
+            android:text="Thêm ảnh"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_luu"
+            style="@style/Paragraph_Regular_black"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customer_button_redborder_radius_30dp"
+            android:text="Lưu ảnh"
+            app:backgroundTint="@null"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
