@@ -4,6 +4,8 @@
       <w>anhs</w>
       <w>bangia</w>
       <w>bangvidientu</w>
+      <w>baocao</w>
+      <w>baotri</w>
       <w>buoc</w>
       <w>bằng</w>
       <w>canhbao</w>
@@ -38,6 +40,7 @@
       <w>dientich</w>
       <w>dịch</w>
       <w>ghinhantin</w>
+      <w>ghép</w>
       <w>giadien</w>
       <w>gianuoc</w>
       <w>giao</w>
@@ -47,11 +50,14 @@
       <w>greyborder</w>
       <w>hinh</w>
       <w>hinhanh</w>
+      <w>hoten</w>
       <w>hovaten</w>
+      <w>hovatenhoso</w>
       <w>hoàn</w>
       <w>hoạt</w>
       <w>hoặc</w>
       <w>huongdan</w>
+      <w>hutech</w>
       <w>hướng</w>
       <w>imgbtn</w>
       <w>imgtbtn</w>
@@ -85,6 +91,7 @@
       <w>luuthongti</w>
       <w>luuthongtin</w>
       <w>luutin</w>
+      <w>mahoso</w>
       <w>mappin</w>
       <w>mataikhoan</w>
       <w>mathanhtoan</w>
@@ -101,9 +108,12 @@
       <w>ngaybatdau</w>
       <w>ngaydang</w>
       <w>ngaydatcoc</w>
+      <w>ngayhethieuluc</w>
       <w>ngaylienhe</w>
+      <w>ngaysinh</w>
       <w>ngoại</w>
       <w>nguoi</w>
+      <w>nguoioghep</w>
       <w>nguoixem</w>
       <w>người</w>
       <w>ngẫu</w>
@@ -153,6 +163,8 @@
       <w>selectloai</w>
       <w>showhide</w>
       <w>songuoio</w>
+      <w>songuoioghep</w>
+      <w>sophong</w>
       <w>sosanh</w>
       <w>sotiendatcoc</w>
       <w>sánh</w>
@@ -167,8 +179,12 @@
       <w>thogntin</w>
       <w>thoi</w>
       <w>thoigian</w>
+      <w>thongbao</w>
       <w>thongtin</w>
       <w>thongtindangnhap</w>
+      <w>thongtindichvu</w>
+      <w>thongtinhso</w>
+      <w>thongtintaichinh</w>
       <w>thoại</w>
       <w>thấy</w>
       <w>thời</w>

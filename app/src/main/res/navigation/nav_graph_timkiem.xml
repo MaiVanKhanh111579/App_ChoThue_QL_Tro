@@ -19,7 +19,11 @@
         android:id="@+id/navigation_luutin"
         android:name="Fg_LuuTin.LuuTinFg"
         tools:layout="@layout/fg_luutin"
-        android:label="Lưu tin"/>
+        android:label="Lưu tin">
+        <action
+            android:id="@+id/action_navigation_luutin_to_navigation_chitiet_tindang"
+            app:destination="@id/navigation_chitiet_tindang" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_dango"
         android:name="Fg_DangO.DangOFg"

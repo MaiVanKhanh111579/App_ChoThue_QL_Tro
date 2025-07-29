@@ -24,7 +24,7 @@ import Data.ENTITY.TinDang;
 import Data.ENTITY.User;
 
 
-@Database(entities = {User.class, TienIch.class, TinDang.class, DanhSachAnh.class, ThongTinNhaTro.class, ThanhToan.class}, version = 5, exportSchema = false)
+@Database(entities = {User.class, TienIch.class, TinDang.class, DanhSachAnh.class, ThongTinNhaTro.class, ThanhToan.class}, version = 6, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "qlNhaTro.db";
@@ -33,7 +33,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static synchronized AppDatabase getInstance(Context context) {
         if (Instance == null) {
             Instance = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, DATABASE_NAME)
-                    .addMigrations(MIGRATION_1_2,MIGRATION_2_3, MIGRATION_3_4,MIGRATION_4_5)
+                    .addMigrations(MIGRATION_1_2,MIGRATION_2_3, MIGRATION_3_4,MIGRATION_4_5,MIGRATION_5_6)
                     .build();
         }
         return Instance;
@@ -99,6 +99,12 @@ public abstract class AppDatabase extends RoomDatabase {
                     "thoiGianThanhToan TEXT, " +
                     "soTienThanhToan TEXT, " +
                     "ma_tindang Interger not null)");
+        }
+    };
+    static final Migration MIGRATION_5_6 = new Migration(5, 6) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE tin_dang ADD COLUMN isLuuTin INTEGER DEFAULT 0");
         }
     };
 

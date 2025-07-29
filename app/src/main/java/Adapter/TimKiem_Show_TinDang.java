@@ -105,18 +105,17 @@ public class TimKiem_Show_TinDang extends RecyclerView.Adapter<TimKiem_Show_TinD
         });
 
         // Xử lý nút Lưu tin
-//        holder.imgbtnLuuTin.setOnClickListener(v -> {
-//            boolean isSaved = !tinDang.getIsSaved();
-//            tinDang.setIsSaved(isSaved);
-//            new Thread(() -> {
-//                db.tinDangDao().updateTinDang(tinDang);
-//                holder.itemView.post(() -> {
-//                    holder.imgbtnLuuTin.setImageResource(isSaved ? R.drawable.ic_heart_filled : R.drawable.ic_heart);
-//                    Toast.makeText(holder.itemView.getContext(), isSaved ? "Đã lưu tin" : "Đã bỏ lưu tin", Toast.LENGTH_SHORT).show();
-//                });
-//            }).start();
-//        });
-//        holder.imgbtnLuuTin.setImageResource(tinDang.getIsSaved() ? R.drawable.ic_heart_filled : R.drawable.ic_heart);
+        holder.imgbtnLuuTin.setOnClickListener(v -> {
+            boolean isSaved = !tinDang.getLuuTin();
+            tinDang.setLuuTin(isSaved);
+            new Thread(() -> {
+                db.tinDangDao().update(tinDang);
+                holder.itemView.post(() -> {
+                    holder.imgbtnLuuTin.setImageResource(isSaved ? R.drawable.ic_heart_red : R.drawable.ic_heart);
+                });
+            }).start();
+        });
+        holder.imgbtnLuuTin.setImageResource(tinDang.getLuuTin() ? R.drawable.ic_heart_red : R.drawable.ic_heart);
     }
 
     @Override

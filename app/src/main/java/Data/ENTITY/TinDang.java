@@ -19,6 +19,7 @@ public class TinDang {
     private String email;
     private String avatar;
     private String ngayDang;
+    private Boolean isLuuTin = false;
     private Boolean isSelected = false;
 
     public TinDang(String tieu_de, String mo_ta, String dia_chi, String dienTich, String giaThue, String so_Nguoi_O, String id_tien_ich, String ho_va_Ten, String sdt, String email, String avatar, String ngayDang) {
@@ -34,6 +35,14 @@ public class TinDang {
         this.email = email;
         this.avatar = avatar;
         this.ngayDang = ngayDang;
+    }
+
+    public Boolean getLuuTin() {
+        return isLuuTin;
+    }
+
+    public void setLuuTin(Boolean luuTin) {
+        isLuuTin = luuTin;
     }
 
     public Boolean getSelected() {

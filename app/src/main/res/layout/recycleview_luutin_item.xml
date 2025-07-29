@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recycleview_luutin_item"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/customer_edittext_greyborder_radius_5dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_recycleview_luutin_tieude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề"
+        android:maxLines="2"
+        android:layout_marginBottom="5dp"
+        style="@style/Heading_3_Bold_black"
+        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf">
+        <ImageView
+            android:id="@+id/img_recycleview_luutin_hinhanh"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="top|start"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+                <TextView
+                    android:id="@+id/txt_recycleview_luutin_giaTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="2,500,000 đ"
+                    android:textColor="@color/red99"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text=" - "
+                    android:textColor="@color/red99"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/txt_recycleview_luutin_dienTich"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Heading_3_Bold_black"
+                    android:text="20 m2"
+                    android:textColor="@color/red99"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_recycleview_luutin_diaChi"
+                style="@style/Paragraph_Regular_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_mappin_20dp"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/grey_text"
+                android:maxLines="1"
+                android:text="Địa chỉ"
+                android:textColor="@color/grey_text"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml,TextContrastCheck" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/txt_recycleview_luutin_ngaydang"
+                    style="@style/Paragraph_Regular_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Ngày đăng"
+                    android:textColor="@color/grey_text"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/imgbtn_recycleview_luutin_luutin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_heart_red"
+                    app:tint="@color/red99"
+                    tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

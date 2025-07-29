@@ -80,8 +80,8 @@ public class PhuongThucThanhToan_DangTintFg extends Fragment {
             return view;
         }
 
-        // Tạo mã QR
-        String qrData = String.format(
+        // Tạo mã QR ngay khi vào màn hình
+        @SuppressLint("DefaultLocale") String qrData = String.format(
                 "Mã tin đăng: %d\nLoại tin: %s\nĐơn giá: %s\nSố ngày: %s\nThời gian bắt đầu: %s\nThời gian kết thúc: %s\nTổng tiền: %s\nPhương thức: Ngân hàng",
                 maTinDang, loaiTin, donGia, soNgay, ngayBatDau, thoiGianKetThuc, tongTien
         );
@@ -89,8 +89,6 @@ public class PhuongThucThanhToan_DangTintFg extends Fragment {
         if (qrBitmap != null) {
             imgQrCode.setImageBitmap(qrBitmap);
             imgQrCode.setVisibility(View.VISIBLE);
-            rdnganhang.setChecked(true); // Đặt RadioButton mặc định
-            startCountdownTimer();
         } else {
             Toast.makeText(requireContext(), "Không thể tạo mã QR", Toast.LENGTH_SHORT).show();
             thanhToanThanhCong = false;

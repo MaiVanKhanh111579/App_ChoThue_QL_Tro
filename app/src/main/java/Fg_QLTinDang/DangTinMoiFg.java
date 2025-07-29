@@ -1,6 +1,5 @@
 package Fg_QLTinDang;
 
-
 import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.Intent;
@@ -361,26 +360,62 @@ public class DangTinMoiFg extends Fragment {
         String dienTich = edtDienTich.getText().toString().trim();
         String giaThue = edtGiaThue.getText().toString().trim();
         String soNguoiO = edtSoNguoiO.getText().toString().trim();
-        String ngayDang = getCurrentDate();
+        String ngayDang = getCurrentDate(); // Lấy ngày hiện tại
+        // Kiểm tra thông tin đầu vào
+        if (diaChiHienThi.isEmpty() || dienTich.isEmpty() || giaThue.isEmpty() || tieuDe.isEmpty() || moTa.isEmpty()) {
+            Toast.makeText(requireContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+            return;
+        }
         String diaChi = edtDiaChi.getText().toString().trim();
         String soPhong = edtSoPhong.getText().toString().trim();
         String giaDien = edtMucGiaDien.getText().toString().trim();
         String giaNuoc = edtMucGiaNuoc.getText().toString().trim();
         String giaInternet = edtMucGiaInternet.getText().toString().trim();
-        String loaiTro = ChonloaiTro.isEmpty() ? "" : ChonloaiTro;
-        String noiThat = ChonNoiThat.isEmpty() ? "" : ChonNoiThat;
-        String loaiPhong = ChonLoaiPhong.isEmpty() ? "" : ChonLoaiPhong;
+        String loaiTro = "";
+        String noiThat = "";
+        String loaiPhong = "";
+        if (ChonloaiTro.equals("Phòng Trọ")) {
+            loaiTro = "Phòng Trọ";
+        } else if (ChonloaiTro.equals("Nhà Trọ")) {
+            loaiTro = "Nhà Trọ";
+        } else {loaiTro = "";}
+
+        if (ChonNoiThat.equals("Đầy đủ nội thất")) {
+            noiThat = "Đầy đủ nội thất";
+        } else if (ChonNoiThat.equals("Nội thất cơ bản")) {
+            noiThat = "Nội thất cơ bản";
+        } else if (ChonNoiThat.equals("Không có nội thất")) {
+            noiThat = "Không có nội thất";
+        } else {
+            noiThat = "";
+        }
+
+        if (ChonLoaiPhong.equals("Dùng chung")){
+            loaiPhong = "Dùng chung";
+        } else if (ChonLoaiPhong.equals("Dùng riêng")) {
+            loaiPhong = "Dùng riêng";
+        } else {loaiPhong = "";}
+
+//        try {
+//            float dienTichValue = Float.parseFloat(dienTich);
+//            float giaThueValue = Float.parseFloat(giaThue);
+//            if (dienTichValue <= 0 || giaThueValue <= 0) {
+//                Toast.makeText(requireContext(), "Diện tích và giá thuê phải lớn hơn 0", Toast.LENGTH_SHORT).show();
+//                return;
+//            }
+//        } catch (NumberFormatException e) {
+//            Toast.makeText(requireContext(), "Diện tích và giá thuê phải là số hợp lệ", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+
+        String finalLoaiTro = loaiTro;
+        String finalNoiThat = noiThat;
+        String finalLoaiPhong = loaiPhong;
+
         String id_tien_ich = selectedTienIchList.stream()
                 .map(TienIch::getMaTienIch)
                 .collect(Collectors.joining(","));
-
-        // Kiểm tra thông tin đầu vào
-        if (diaChiHienThi.isEmpty() || dienTich.isEmpty() || giaThue.isEmpty() || tieuDe.isEmpty() || moTa.isEmpty() || loaiTro.isEmpty()) {
-            Toast.makeText(requireContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Lấy thông tin người dùng
+        Log.d("TienIch", "Saving id_tien_ich: " + id_tien_ich);
         new Thread(() -> {
             UserDao userDao = db.userDao();
             User logged = userDao.findLoggedUser();
@@ -398,31 +433,33 @@ public class DangTinMoiFg extends Fragment {
                 if (logged.getAvatar() != null && !logged.getAvatar().isEmpty()) {
                     avatar = Uri.parse(logged.getAvatar());
                 }
-
-                // Truyền dữ liệu sang DangTinMoiFg_2Fg
-                Bundle bundle = new Bundle();
-                bundle.putString("tieuDe", tieuDe);
-                bundle.putString("moTa", moTa);
-                bundle.putString("diaChiHienThi", diaChiHienThi);
-                bundle.putString("dienTich", dienTich);
-                bundle.putString("giaThue", giaThue);
-                bundle.putString("soNguoiO", soNguoiO);
-                bundle.putString("ngayDang", ngayDang);
-                bundle.putString("diaChi", diaChi);
-                bundle.putString("soPhong", soPhong);
-                bundle.putString("giaDien", giaDien);
-                bundle.putString("giaNuoc", giaNuoc);
-                bundle.putString("giaInternet", giaInternet);
-                bundle.putString("loaiTro", loaiTro);
-                bundle.putString("noiThat", noiThat);
-                bundle.putString("loaiPhong", loaiPhong);
-                bundle.putString("id_tien_ich", id_tien_ich);
-                bundle.putString("hoVaTen", logged.getHoVaTen());
-                bundle.putString("sdt", logged.getSDTChinh());
-                bundle.putString("email", logged.getEmail());
-                bundle.putString("avatar", logged.getAvatar());
-                Navigation.findNavController(view).navigate(R.id.action_navigation_dangtinmoi_to_navigation_dangtinmoi_2, bundle);
             });
+
+            // Lưu tin đăng
+            try {
+                TinDangDao tinDangDao = db.tinDangDao();
+                TinDang tinDang = new TinDang(tieuDe, moTa, diaChiHienThi, dienTich, giaThue, soNguoiO,
+                        id_tien_ich, logged.getHoVaTen(), logged.getSDTChinh(), logged.getEmail(), logged.getAvatar(), ngayDang);
+                long ma_TinDang = tinDangDao.insert(tinDang);
+                int id_tindang = (int) ma_TinDang;
+                ThongTinNhaTroDao thongTinNhaTroDao = db.thongTinNhaTroDao();
+                ThongTinNhaTro thongTinNhaTro = new ThongTinNhaTro(soPhong, diaChi, finalLoaiTro, finalNoiThat, finalLoaiPhong, giaDien, giaNuoc, giaInternet, id_tindang);
+                long ma_ThongTinNhaTro = thongTinNhaTroDao.insert(thongTinNhaTro);
+                if (ma_TinDang != -1 & ma_ThongTinNhaTro != -1) {
+                    requireActivity().runOnUiThread(() -> {
+                        Toast.makeText(requireContext(), "Lưu tin đăng thành công", Toast.LENGTH_SHORT).show();
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("ma_TinDang", (int) ma_TinDang);
+                        Navigation.findNavController(view).navigate(R.id.action_navigation_dangtinmoi_to_navigation_dangtinmoi_2, bundle);
+                    });
+                } else {
+                    requireActivity().runOnUiThread(() ->
+                            Toast.makeText(requireContext(), "Lỗi khi lưu tin đăng", Toast.LENGTH_SHORT).show());
+                }
+            } catch (Exception e) {
+                requireActivity().runOnUiThread(() ->
+                        Toast.makeText(requireContext(), "Lỗi khi lưu tin đăng: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+            }
         }).start();
     }
     private String getCurrentDate() {

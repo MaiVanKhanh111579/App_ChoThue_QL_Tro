@@ -57,6 +57,18 @@ public class DangTinMoiFg_2Fg extends Fragment {
         view = inflater.inflate(R.layout.fg_dangtinmoi_2, container, false);
         anhXaView();
 
+        // Lấy ma_TinDang từ Bundle
+        if (getArguments() != null) {
+            ma_TinDang = getArguments().getInt("ma_TinDang");
+        }
+
+        // Kiểm tra ma_TinDang
+        if (ma_TinDang == 0) {
+            Toast.makeText(requireContext(), "Không tìm thấy mã tin đăng", Toast.LENGTH_SHORT).show();
+            Navigation.findNavController(view).popBackStack();
+            return view;
+        }
+
         // Thiết lập RecyclerView
         adapter = new TinDang_DanhSachAnh(imageUrls, position -> {
             // Xóa tệp ảnh khi xóa khỏi danh sách
@@ -72,7 +84,7 @@ public class DangTinMoiFg_2Fg extends Fragment {
         ListAnh.setAdapter(adapter);
 
         // Tải ảnh đã lưu (nếu có)
-//        loadExistingImages();
+        loadExistingImages();
 
         // Xử lý chọn ảnh
         btn_TaiAnh.setOnClickListener(v -> {
@@ -175,51 +187,39 @@ public class DangTinMoiFg_2Fg extends Fragment {
             return;
         }
 
-        // Nhận dữ liệu từ Bundle trước đó
-        Bundle args = getArguments();
-        if (args == null) {
-            Toast.makeText(requireContext(), "Thiếu thông tin tin đăng", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Truyền dữ liệu sang DangTinMoiFg_3Fg
-        Bundle bundle = new Bundle();
-        bundle.putString("tieuDe", args.getString("tieuDe", ""));
-        bundle.putString("moTa", args.getString("moTa", ""));
-        bundle.putString("diaChiHienThi", args.getString("diaChiHienThi", ""));
-        bundle.putString("dienTich", args.getString("dienTich", ""));
-        bundle.putString("giaThue", args.getString("giaThue", ""));
-        bundle.putString("soNguoiO", args.getString("soNguoiO", ""));
-        bundle.putString("ngayDang", args.getString("ngayDang", ""));
-        bundle.putString("diaChi", args.getString("diaChi", ""));
-        bundle.putString("soPhong", args.getString("soPhong", ""));
-        bundle.putString("giaDien", args.getString("giaDien", ""));
-        bundle.putString("giaNuoc", args.getString("giaNuoc", ""));
-        bundle.putString("giaInternet", args.getString("giaInternet", ""));
-        bundle.putString("loaiTro", args.getString("loaiTro", ""));
-        bundle.putString("noiThat", args.getString("noiThat", ""));
-        bundle.putString("loaiPhong", args.getString("loaiPhong", ""));
-        bundle.putString("id_tien_ich", args.getString("id_tien_ich", ""));
-        bundle.putString("hoVaTen", args.getString("hoVaTen", ""));
-        bundle.putString("sdt", args.getString("sdt", ""));
-        bundle.putString("email", args.getString("email", ""));
-        bundle.putString("avatar", args.getString("avatar", ""));
-        bundle.putStringArrayList("imageUrls", new ArrayList<>(imageUrls));
-        Navigation.findNavController(view).navigate(R.id.navigation_dangtinmoi_3, bundle);
+        new Thread(() -> {
+            try {
+                DanhSachAnhDao danhSachAnhDao = db.danhSachAnhDao();
+                danhSachAnhDao.deleteDanhSachAnh_by_TinDangId(ma_TinDang); // Xóa ảnh cũ
+                for (String imagePath : imageUrls) {
+                    DanhSachAnh image = new DanhSachAnh(ma_TinDang, imagePath);
+                    danhSachAnhDao.insertDanhSachAnh(image);
+                }
+                requireActivity().runOnUiThread(() -> {
+                    Toast.makeText(requireContext(), "Lưu ảnh thành công", Toast.LENGTH_SHORT).show();
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("ma_TinDang", ma_TinDang);
+                    Navigation.findNavController(view).navigate(R.id.navigation_dangtinmoi_3, bundle);
+                });
+            } catch (Exception e) {
+                requireActivity().runOnUiThread(() ->
+                        Toast.makeText(requireContext(), "Lỗi khi lưu ảnh: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+            }
+        }).start();
     }
 
-//    @SuppressLint("NotifyDataSetChanged")
-//    private void loadExistingImages() {
-//        new Thread(() -> {
-//            DanhSachAnhDao danhSachAnhDao = db.danhSachAnhDao();
-//            List<DanhSachAnh> images = danhSachAnhDao.getImagesByPostId(ma_TinDang);
-//            imageUrls.clear();
-//            for (DanhSachAnh image : images) {
-//                imageUrls.add(image.getImageUrl());
-//            }
-//            requireActivity().runOnUiThread(() -> adapter.notifyDataSetChanged());
-//        }).start();
-//    }
+    @SuppressLint("NotifyDataSetChanged")
+    private void loadExistingImages() {
+        new Thread(() -> {
+            DanhSachAnhDao danhSachAnhDao = db.danhSachAnhDao();
+            List<DanhSachAnh> images = danhSachAnhDao.getImagesByPostId(ma_TinDang);
+            imageUrls.clear();
+            for (DanhSachAnh image : images) {
+                imageUrls.add(image.getImageUrl());
+            }
+            requireActivity().runOnUiThread(() -> adapter.notifyDataSetChanged());
+        }).start();
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

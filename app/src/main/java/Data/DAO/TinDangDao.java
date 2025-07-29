@@ -25,4 +25,7 @@ public interface TinDangDao {
 
     @Delete
     void deleteTinDang(TinDang tinDang);
+
+    @Query("SELECT * FROM tin_dang WHERE isLuuTin = 1 ORDER BY ngayDang DESC")
+    List<TinDang> getSavedTinDang();
 }
