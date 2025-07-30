@@ -11,12 +11,14 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import Data.DAO.DanhSachAnhDao;
+import Data.DAO.DatCocTruocDao;
 import Data.DAO.ThanhToanDao;
 import Data.DAO.ThongTinNhaTroDao;
 import Data.DAO.TienIchDao;
 import Data.DAO.TinDangDao;
 import Data.DAO.UserDao;
 import Data.ENTITY.DanhSachAnh;
+import Data.ENTITY.DatCocTruoc;
 import Data.ENTITY.ThanhToan;
 import Data.ENTITY.ThongTinNhaTro;
 import Data.ENTITY.TienIch;
@@ -24,7 +26,7 @@ import Data.ENTITY.TinDang;
 import Data.ENTITY.User;
 
 
-@Database(entities = {User.class, TienIch.class, TinDang.class, DanhSachAnh.class, ThongTinNhaTro.class, ThanhToan.class}, version = 6, exportSchema = false)
+@Database(entities = {User.class, TienIch.class, TinDang.class, DanhSachAnh.class, ThongTinNhaTro.class, ThanhToan.class, DatCocTruoc.class}, version = 7, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "qlNhaTro.db";
@@ -33,7 +35,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static synchronized AppDatabase getInstance(Context context) {
         if (Instance == null) {
             Instance = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, DATABASE_NAME)
-                    .addMigrations(MIGRATION_1_2,MIGRATION_2_3, MIGRATION_3_4,MIGRATION_4_5,MIGRATION_5_6)
+                    .addMigrations(MIGRATION_1_2,MIGRATION_2_3, MIGRATION_3_4,MIGRATION_4_5,MIGRATION_5_6, MIGRATION_6_7)
                     .build();
         }
         return Instance;
@@ -107,6 +109,20 @@ public abstract class AppDatabase extends RoomDatabase {
             database.execSQL("ALTER TABLE tin_dang ADD COLUMN isLuuTin INTEGER DEFAULT 0");
         }
     };
+    static final Migration MIGRATION_6_7 = new Migration(6, 7) {
+        @Override
+        public void migrate(SupportSQLiteDatabase database) {
+            database.execSQL("CREATE TABLE IF NOT EXISTS `datcoctruoc` (" +
+                    "`maDatCocTruoc` TEXT NOT NULL, " +
+                    "`maKhachHang` TEXT, " +
+                    "`maTinDang` TEXT, " +
+                    "`tienDatCoc` TEXT, " +
+                    "`ngayDatCoc` TEXT, " +
+                    "`ngayLienHe` TEXT, " +
+                    "`trangThai` TEXT, " +
+                    "PRIMARY KEY(`maDatCocTruoc`))");
+        }
+    };
 
     public abstract UserDao userDao();
     public abstract TinDangDao tinDangDao();
@@ -114,4 +130,5 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract TienIchDao tienIchDao();
     public abstract ThongTinNhaTroDao thongTinNhaTroDao();
     public abstract ThanhToanDao thanhToanDao();
+    public abstract DatCocTruocDao datCocTruocDao();
 }

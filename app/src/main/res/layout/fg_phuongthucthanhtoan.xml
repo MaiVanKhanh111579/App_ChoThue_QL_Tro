@@ -39,6 +39,7 @@
                 android:text="Chuyển khoản ngân hàng"
                 style="@style/Heading_3_Regular_black"
                 android:paddingStart="10dp"
+                app:buttonTint="@color/selector_radio"
                 tools:ignore="HardcodedText,RtlSymmetry,VisualLintButtonSize" />
             <RadioButton
                 android:id="@+id/radio_phuongthucthanhtoan_bangvidientu"
@@ -62,6 +63,7 @@
                 android:layout_height="200dp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
+                android:src="@drawable/qr"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:id="@+id/txt_countdown"

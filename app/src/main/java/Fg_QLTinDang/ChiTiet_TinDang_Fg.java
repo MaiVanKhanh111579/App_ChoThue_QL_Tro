@@ -55,8 +55,19 @@ public class ChiTiet_TinDang_Fg extends Fragment {
             Navigation.findNavController(v).popBackStack();
             bottomNav.setVisibility(View.VISIBLE);
         });
+
         btnDatCocTruoc.setOnClickListener(v -> {
-            Navigation.findNavController(v).navigate(R.id.action_navigation_chitiet_tindang_to_navigation_datcoctruoc);
+            // TẠO BUNDLE ĐỂ GỬI DỮ LIỆU
+            Bundle bundle = new Bundle();
+            bundle.putInt("ma_TinDang", ma_TinDang);
+            bundle.putString("diaChi", txtDiachi.getText().toString());
+            bundle.putString("tienThue", txtTienThue.getText().toString());
+            bundle.putString("tienCoc", txtTienCoc.getText().toString());
+            bundle.putString("hoTen", txtHoVaTen.getText().toString());
+            bundle.putString("sdt", txtSDT.getText().toString());
+
+            // Điều hướng với bundle
+            Navigation.findNavController(v).navigate(R.id.action_navigation_chitiet_tindang_to_navigation_datcoctruoc, bundle);
             bottomNav.setVisibility(View.GONE);
         });
         return view;

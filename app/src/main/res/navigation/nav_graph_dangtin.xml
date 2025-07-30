@@ -22,7 +22,11 @@
         android:id="@+id/navigation_khachhang"
         android:name="Fg_KhachHang.KhachHangFg"
         tools:layout="@layout/fg_khachhang"
-        android:label="Quản lí tin đăng"/>
+        android:label="Quản lí tin đăng">
+        <action
+            android:id="@+id/action_navigation_khachhang_to_navigation_ketquagiaodich_khachhang_thongbao"
+            app:destination="@id/navigation_ketquagiaodich_khachhang_thongbao" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_taikhoan_dangtin"
         android:name="Fg_TaiKhoan.TaiKhoanFg_DangTin"
@@ -116,4 +120,10 @@
         android:name="Fg_ThanhToan.KetQuaGiaoDich_DangTinFg"
         tools:layout="@layout/fg_ketquagiaodich_dangtin"
         android:label="Phương thức thanh toán"/>
+    <fragment
+        android:id="@+id/navigation_ketquagiaodich_khachhang_thongbao"
+        android:name="Fg_KhachHang.KhachHang_ThongBaoFg"
+        tools:layout="@layout/fg_khachhang_thongbao"
+        android:label="Thông báo đặt cọc"/>
+
 </navigation>

@@ -238,7 +238,7 @@
                 <EditText
                     android:id="@+id/edt_datcoctruoc_ngaylienhe"
                     style="@style/Heading_3_Bold_black"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="30dp"
                     android:background="@drawable/customer_edittext_greyborder_radius_5dp"
                     android:gravity="center"
@@ -247,7 +247,7 @@
                     android:maxLines="1"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:text="26/08/2025"
+                    android:hint="26/08/2025"
                     tools:ignore="Autofill,HardcodedText,LabelFor,TextFields,TextSizeCheck,TouchTargetSizeCheck" />
             </LinearLayout>
         </LinearLayout>

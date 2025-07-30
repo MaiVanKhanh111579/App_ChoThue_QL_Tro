@@ -35,6 +35,7 @@
                 android:layout_height="wrap_content"
                 style="@style/Paragraph_Bold_black"
                 android:text="1"
+                android:id="@+id/txt_khachhang_thongbao"
                 android:textColor="@color/redCD"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
