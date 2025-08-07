@@ -49,6 +49,8 @@ public class DangNhapFg extends Fragment {
         mbutton_dangnhap.setOnClickListener(v -> { DangNhap();});
         txt_dangky.setOnClickListener(v -> {Navigation.findNavController(v).navigate(R.id.navigation_dangky);
             bottomNav.setVisibility(View.GONE);});
+        txt_thoat.setOnClickListener(v -> {Navigation.findNavController(v).navigate(R.id.navigation_timkiem);
+            bottomNav.setVisibility(View.VISIBLE);});
         return view;
     }
 
